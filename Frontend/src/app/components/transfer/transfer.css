@@ -1,0 +1,68 @@
+.transfer-container{
+
+    display:flex;
+    justify-content:center;
+    padding:40px;
+    background:#f4f6fb;
+    min-height:100vh;
+
+}
+
+.transfer-card{
+
+    width:100%;
+    max-width:550px;
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+
+.transfer-card h2{
+
+    text-align:center;
+    color:#8B1E5A;
+    margin-bottom:25px;
+    font-weight:bold;
+
+}
+
+.balance-box{
+
+    background:#f8eef3;
+    border-left:6px solid #8B1E5A;
+    padding:18px;
+    border-radius:10px;
+    margin-bottom:25px;
+
+}
+
+.balance-box h5{
+
+    margin:0;
+    color:#555;
+
+}
+
+.balance-box h3{
+
+    color:#8B1E5A;
+    margin-top:8px;
+
+}
+
+.transfer-btn{
+
+    background:#8B1E5A;
+    color:white;
+    font-weight:bold;
+
+}
+
+.transfer-btn:hover{
+
+    background:#73194a;
+    color:white;
+
+}

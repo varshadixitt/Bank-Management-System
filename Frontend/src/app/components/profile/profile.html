@@ -1,0 +1,65 @@
+<div class="profile-page">
+
+    <div class="profile-card">
+
+        <div class="profile-header">
+
+            <div class="avatar">
+                👤
+            </div>
+
+            <div>
+
+                <h2>{{user?.fullName}}</h2>
+
+                <p>{{user?.email}}</p>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="profile-info">
+
+            <div class="info">
+
+                <label>Account Number</label>
+
+                <span>{{user?.accountNumber}}</span>
+
+            </div>
+
+            <div class="info">
+
+                <label>Account Type</label>
+
+                <span>{{user?.accountType}}</span>
+
+            </div>
+
+            <div class="info">
+
+                <label>Current Balance</label>
+
+                <span class="balance">
+
+                    ₹ {{user?.balance}}
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <button
+            class="logout-btn"
+            (click)="logout()">
+
+            Logout
+
+        </button>
+
+    </div>
+
+</div>

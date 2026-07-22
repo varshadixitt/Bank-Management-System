@@ -1,0 +1,12 @@
+.card {
+    max-width: 550px;
+    margin: auto;
+}
+
+.card-header {
+    font-weight: bold;
+}
+
+button {
+    font-size: 18px;
+}

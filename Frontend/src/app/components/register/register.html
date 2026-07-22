@@ -1,0 +1,111 @@
+<div class="container mt-5">
+
+    <div class="card shadow">
+
+        <div class="card-header bg-primary text-white">
+            <h3 class="text-center">User Registration</h3>
+        </div>
+
+        <div class="card-body">
+
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input
+                    class="form-control"
+                    [(ngModel)]="request.fullName">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input
+                    class="form-control"
+                    [(ngModel)]="request.email">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input
+                    type="password"
+                    class="form-control"
+                    [(ngModel)]="request.password">
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Already Have an Account?
+                </label>
+
+                <select
+                    class="form-select"
+                    [(ngModel)]="request.hasAccount">
+
+                    <option [ngValue]="false">No</option>
+                    <option [ngValue]="true">Yes</option>
+
+                </select>
+
+            </div>
+
+            <div
+                class="mb-3"
+                *ngIf="!request.hasAccount">
+
+                <label class="form-label">
+                    Account Type
+                </label>
+
+                <select
+                    class="form-select"
+                    [(ngModel)]="request.accountType">
+
+                    <option>Savings</option>
+                    <option>Current</option>
+
+                </select>
+
+            </div>
+
+            <div
+                class="mb-3"
+                *ngIf="request.hasAccount">
+
+                <label class="form-label">
+                    Account Number
+                </label>
+
+                <input
+                    class="form-control"
+                    [(ngModel)]="request.accountNumber">
+
+            </div>
+
+            <button
+                class="btn btn-primary w-100"
+                (click)="register()">
+
+                Register
+
+            </button>
+
+            <div
+                class="alert alert-success mt-3"
+                *ngIf="successMessage">
+
+                {{successMessage}}
+
+            </div>
+
+            <div
+                class="alert alert-danger mt-3"
+                *ngIf="errorMessage">
+
+                {{errorMessage}}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

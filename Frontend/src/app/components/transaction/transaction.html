@@ -1,0 +1,125 @@
+<div class="transaction-container">
+
+    <h2>Transaction History</h2>
+
+    <div class="account-card">
+
+        <p><strong>Account Number:</strong> {{user.accountNumber}}</p>
+
+        <p><strong>Account Holder:</strong> {{user.fullName}}</p>
+
+    </div>
+
+    <!-- Button -->
+
+    <div class="text-center mt-4" *ngIf="!showTransactions">
+
+        <button
+            class="btn btn-primary btn-lg"
+            (click)="openPopup()">
+
+            View Transactions
+
+        </button>
+
+    </div>
+
+    <!-- Loading -->
+
+    <div class="loading mt-4" *ngIf="loading">
+
+        Loading Transactions...
+
+    </div>
+
+    <!-- Error -->
+
+    <div class="alert alert-danger mt-3" *ngIf="error">
+
+        {{error}}
+
+    </div>
+
+    <!-- Table -->
+
+    <table
+        class="table table-bordered table-hover mt-4"
+        *ngIf="showTransactions && !loading && transactions.length>0">
+
+        <thead class="table-dark">
+
+            <tr>
+
+                <th>ID</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Date & Time</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr *ngFor="let t of transactions">
+
+                <td>{{t.id}}</td>
+                <td>{{t.type}}</td>
+                <td>₹ {{t.amount}}</td>
+                <td>{{t.transactionTime | date:'dd/MM/yyyy hh:mm a'}}</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div
+        class="empty mt-4"
+        *ngIf="showTransactions && !loading && transactions.length==0">
+
+        No Transactions Found
+
+    </div>
+
+</div>
+
+<!-- Angular Popup -->
+
+<div class="popup-overlay" *ngIf="showPopup">
+
+    <div class="popup">
+
+        <h3>🔒 Transaction History</h3>
+
+        <p>
+            Your transaction history contains sensitive information.
+        </p>
+
+        <p>
+            Do you want to continue?
+        </p>
+
+        <div class="buttons">
+
+            <button
+                class="btn btn-secondary"
+                (click)="cancelPopup()">
+
+                Cancel
+
+            </button>
+
+            <button
+                class="btn btn-primary"
+                (click)="confirmPopup()">
+
+                View
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>

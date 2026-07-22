@@ -1,0 +1,47 @@
+<div class="login-container">
+
+    <div class="login-card">
+
+        <h2>Login</h2>
+
+        <!-- Success Alert -->
+        <div class="alert alert-success" *ngIf="successMessage">
+            {{ successMessage }}
+        </div>
+
+        <!-- Error Alert -->
+        <div class="alert alert-danger" *ngIf="errorMessage">
+            {{ errorMessage }}
+        </div>
+
+        <input
+            type="email"
+            placeholder="Email"
+            [(ngModel)]="loginRequest.email">
+
+        <input
+            type="password"
+            placeholder="Password"
+            [(ngModel)]="loginRequest.password">
+
+        <button
+            (click)="login()"
+            [disabled]="loading">
+
+            <span
+                class="spinner-border spinner-border-sm me-2"
+                *ngIf="loading">
+            </span>
+
+            {{ loading ? 'Logging in...' : 'Login' }}
+
+        </button>
+
+        <p>
+            Don't have an account?
+            <a routerLink="/register">Register</a>
+        </p>
+
+    </div>
+
+</div>

@@ -1,0 +1,84 @@
+.hero{
+
+    padding:90px 0;
+    background:#F8F5F7;
+
+}
+
+.brand{
+
+    color:#8B1E5A;
+
+}
+
+.hero-image{
+
+    width:100%;
+
+    max-width:450px;
+
+    display:block;
+
+    margin:auto;
+
+}
+
+.service-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    height:280px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.service-card h3{
+
+    font-size:55px;
+    margin-bottom:20px;
+
+}
+
+.why-us{
+
+    background:white;
+    padding:80px 0;
+
+}
+
+.btn-outline-primary{
+
+    border:2px solid #8B1E5A;
+    color:#8B1E5A;
+
+}
+
+.btn-outline-primary:hover{
+
+    background:#8B1E5A;
+    color:white;
+
+}

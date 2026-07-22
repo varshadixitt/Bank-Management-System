@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+
+    --primary:#8B1E5A;
+    --primary-dark:#6E1747;
+    --background:#F7F8FA;
+    --white:#ffffff;
+    --text:#2F2F2F;
+    --border:#E5E5E5;
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+body{
+
+    background:var(--background);
+    color:var(--text);
+
+}
+
+.card{
+
+    border:none;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.btn-primary{
+
+    background:var(--primary)!important;
+    border:none!important;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark)!important;
+
+}
+
+.section-title{
+
+    font-size:40px;
+    font-weight:700;
+
+}
+
+.section-subtitle{
+
+    color:#666;
+
+}

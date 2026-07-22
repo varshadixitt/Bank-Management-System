@@ -1,0 +1,57 @@
+.deposit-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:80vh;
+
+    background:#f5f7fb;
+
+}
+
+.deposit-card{
+
+    width:500px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.deposit-card h2{
+
+    margin-bottom:30px;
+
+    color:#8B1E5A;
+
+    font-weight:bold;
+
+}
+
+.deposit-btn{
+
+    background:#8B1E5A;
+
+    color:white;
+
+    border:none;
+
+    padding:12px;
+
+    font-size:18px;
+
+}
+
+.deposit-btn:hover{
+
+    background:#6d1645;
+
+}

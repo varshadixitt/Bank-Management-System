@@ -1,0 +1,88 @@
+<div class="dashboard">
+
+    <h2 class="greeting">
+        Welcome back, {{user?.fullName}} 👋
+    </h2>
+
+    <div class="balance-card">
+        <span>Available Balance</span>
+        <h1>₹ {{user?.balance}}</h1>
+    </div>
+
+    <div class="account-section">
+
+        <div class="account-card">
+            <small>Account Number</small>
+            <h4>{{user?.accountNumber}}</h4>
+        </div>
+
+        <div class="account-card">
+            <small>Account Type</small>
+            <h4>{{user?.accountType}}</h4>
+        </div>
+
+    </div>
+
+    <h3 class="section-title">Quick Actions</h3>
+
+    <div class="actions">
+
+        <a routerLink="/deposit" class="action">
+            💰
+            <span>Deposit</span>
+        </a>
+
+        <a routerLink="/withdraw" class="action">
+            💳
+            <span>Withdraw</span>
+        </a>
+
+        <a routerLink="/transfer" class="action">
+            🔄
+            <span>Transfer</span>
+        </a>
+
+        <a routerLink="/transaction" class="action">
+            📑
+            <span>Transactions</span>
+        </a>
+
+    </div>
+
+    <div class="recent-card">
+
+        <h3>Recent Transactions</h3>
+
+        <table class="table mt-3" *ngIf="transactions.length > 0">
+
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr *ngFor="let t of transactions">
+
+                    <td>{{t.type}}</td>
+                    <td>₹ {{t.amount}}</td>
+                    <td>{{t.transactionTime | date:'medium'}}</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <div *ngIf="transactions.length==0">
+
+            No transactions available.
+
+        </div>
+
+    </div>
+
+</div>

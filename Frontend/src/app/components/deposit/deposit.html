@@ -1,0 +1,60 @@
+<div class="deposit-container">
+
+    <div class="deposit-card">
+
+        <h2>Deposit Money</h2>
+
+        <div class="mb-4">
+
+            <label class="form-label">
+                Account Number
+            </label>
+
+            <input
+                class="form-control"
+                [value]="accountNumber"
+                readonly>
+
+        </div>
+
+        <div class="mb-4">
+
+            <label class="form-label">
+                Amount
+            </label>
+
+            <input
+                type="number"
+                class="form-control"
+                placeholder="Enter amount"
+                [(ngModel)]="amount">
+
+        </div>
+
+        <button
+            class="btn deposit-btn w-100"
+            (click)="depositMoney()">
+
+            Deposit Money
+
+        </button>
+
+        <div
+            *ngIf="successMessage"
+            class="alert alert-success mt-4">
+
+            {{successMessage}}
+
+        </div>
+
+        <div
+            *ngIf="errorMessage"
+            class="alert alert-danger mt-4">
+
+            {{errorMessage}}
+
+        </div>
+
+    </div>
+
+</div>
